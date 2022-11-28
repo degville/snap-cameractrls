@@ -13,26 +13,21 @@ adopt-info: cameractrls
 grade: stable 
 confinement: strict
 
-slots:
-  dbus-daemon:
-    interface: dbus
-    bus: session
-    name: hu.irl.cameractrls
+architectures:
+  - build-on: amd64
 
 apps:
   cameractrls:
-    command: /usr/bin/cameractrls.py
+    command: usr/bin/cameractrls.py
     plugs:
       - camera
       - home
   cameractrlsgtk:
     extensions: [gnome]
-    command: /usr/bin/cameractrlsgtk.py
+    command: usr/bin/cameractrlsgtk.py
     plugs:
       - camera
       - home
-    slots:
-      - dbus-daemon
     common-id: hu.irl.cameractrls
 
 parts:
