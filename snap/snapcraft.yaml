@@ -16,6 +16,12 @@ confinement: strict
 architectures:
   - build-on: amd64
 
+slots:
+  dbus-daemon:
+    interface: dbus
+    bus: session
+    name: hu.irl.cameractrls
+
 apps:
   cameractrls:
     command: usr/bin/cameractrls.py
@@ -28,6 +34,8 @@ apps:
     plugs:
       - camera
       - home
+    slots:
+      - dbus-daemon
     common-id: hu.irl.cameractrls
 
 parts:
