@@ -27,4 +27,4 @@ example:
   /snap/cameractrls/x1/usr/bin/cameractrls.py -c brightness=128,kiyo_pro_hdr=on,kiyo_pro_fov=wide
 ```
 
-[![cameractrls]()](https://snapcraft.io/cameractrl)
+[![cameractrls]()](https://snapcraft.io/cameractrls)
