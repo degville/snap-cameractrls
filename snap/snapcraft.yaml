@@ -48,8 +48,6 @@ parts:
       snapcraftctl set-version \
       "$(git describe --long --tags --always --match=v*.*.* | sed 's/v//')"
     stage-packages:
-       - python3-usb
-       - libusb-1.0-0
        - libturbojpeg
        - libsdl2-2.0-0
     override-build: |
