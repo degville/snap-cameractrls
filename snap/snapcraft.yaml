@@ -26,19 +26,26 @@ apps:
   cameractrls:
     command: usr/bin/cameractrls.py
     plugs:
+      - media-control
       - camera
       - home
   cameractrlsgtk:
     extensions: [gnome]
     command: usr/bin/cameractrlsgtk.py
+    desktop: cameractrls.desktop
     plugs:
       - camera
       - home
+      - raw-usb
     slots:
       - dbus-daemon
     common-id: hu.irl.cameractrls
 
 parts:
+  desktop-file:
+    source: gui
+    source-type: local
+    plugin: dump
   cameractrls:
     plugin: python
     source-type: git
