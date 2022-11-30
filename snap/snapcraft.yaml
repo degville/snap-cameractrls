@@ -26,8 +26,8 @@ apps:
   cameractrls:
     command: usr/bin/cameractrls.py
     plugs:
-      - media-control
       - camera
+      - raw-usb
       - home
   cameractrlsgtk:
     extensions: [gnome]
@@ -35,8 +35,8 @@ apps:
     desktop: cameractrls.desktop
     plugs:
       - camera
-      - home
       - raw-usb
+      - home
     slots:
       - dbus-daemon
     common-id: hu.irl.cameractrls
