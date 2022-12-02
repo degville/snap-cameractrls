@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=cameractrls
+Comment=Camera controls for Linux
+Exec=cameractrlsgtk.py
+Icon=${SNAP}/cameractrls.png
+Terminal=false
+Categories=Settings;
