@@ -59,10 +59,7 @@ parts:
     stage-packages:
        - libturbojpeg
        - libsdl2-2.0-0
-       - python3-sdl2
-       - python3-opengl
        - libpango1.0-0
-       - libglu1-mesa
     override-build: |
       snapcraftctl build
       install -Dm755 "cameractrls.py" "cameractrlsgtk.py" "cameraview.py" -t "$SNAPCRAFT_PART_INSTALL/usr/bin"
